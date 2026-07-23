@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IzyTrust Control Console | Interactive prototype</title>
+  <meta name="description" content="Evaluate an AI agent request, apply policy, require human approval and inspect audit evidence." />
+  <meta name="robots" content="noindex,follow" />
+  <meta name="theme-color" content="#0c1221" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./demo.css" />
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to the simulator</a>
+  <header class="app-header">
+    <div class="header-brand">
+      <a href="../" aria-label="Back to IzyTrust landing page"><img src="../assets/izylife-logo.png" alt="Izylife Solutions" width="2501" height="834" /><span>IzyTrust</span></a>
+      <span class="prototype-badge">Interactive prototype</span>
+    </div>
+    <div class="header-status"><span class="status-dot" aria-hidden="true"></span>Policy engine ready</div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">Agent action simulator</p><h1>See the trust decision before the tool executes.</h1><p>Choose a realistic request. IzyTrust binds agent identity and user intent, evaluates policy, routes high-impact actions for approval and preserves evidence.</p></div>
+      <aside class="simulation-notice"><strong>Safe demonstration</strong><p>No real agent, MCP server, customer record or payment system is contacted.</p></aside>
+    </section>
+    <section class="scenario-bar" aria-labelledby="scenario-title">
+      <div><p class="section-label" id="scenario-title">Try a scenario</p><p class="section-help">Each preset demonstrates a different policy outcome.</p></div>
+      <div class="scenario-buttons">
+        <button type="button" class="scenario-button" data-scenario="allow"><span class="scenario-outcome outcome-allow">Allow</span>Read supplier profile</button>
+        <button type="button" class="scenario-button is-active" data-scenario="approval"><span class="scenario-outcome outcome-approval">Approval</span>Issue €2,500 refund</button>
+        <button type="button" class="scenario-button" data-scenario="deny"><span class="scenario-outcome outcome-deny">Deny</span>Delete production data</button>
+      </div>
+    </section>
+    <section class="workspace" id="workspace">
+      <form class="request-panel panel" id="request-form">
+        <div class="panel-heading"><div><p class="section-label">1 · Agent request</p><h2>Intent and execution context</h2></div><span class="request-id" id="request-id">REQ-2500-A7</span></div>
+        <label>Acting agent<select id="agent"><option value="support-agent">Customer Support Agent</option><option value="procurement-agent">Procurement Agent</option><option value="operations-agent">Platform Operations Agent</option></select></label>
+        <div class="field-grid">
+          <label>MCP server<select id="server"><option value="payments-mcp">payments-mcp</option><option value="erp-mcp">erp-mcp</option><option value="production-db-mcp">production-db-mcp</option></select></label>
+          <label>Tool action<select id="action"><option value="issue_refund">issue_refund</option><option value="read_supplier">read_supplier</option><option value="delete_records">delete_records</option></select></label>
+        </div>
+        <div class="field-grid">
+          <label>Requesting user<input id="user" value="m.rossi@acme.eu" /></label>
+          <label>Data classification<select id="classification"><option value="internal">Internal</option><option value="confidential" selected>Confidential</option><option value="restricted">Restricted</option></select></label>
+        </div>
+        <label>Business purpose<input id="purpose" value="Resolve customer case CS-1048 after duplicate charge" /></label>
+        <label id="amount-field">Amount<span class="input-prefix"><span aria-hidden="true">€</span><input id="amount" type="number" min="0" step="50" value="2500" /></span></label>
+        <button class="primary-button" type="submit">Evaluate request <span aria-hidden="true">→</span></button>
+      </form>
+      <section class="decision-panel panel" aria-live="polite">
+        <div class="panel-heading"><div><p class="section-label">2 · Trust decision</p><h2>Policy evaluation</h2></div><span class="decision-badge decision-approval" id="decision-badge">Requires approval</span></div>
+        <div class="decision-summary"><p class="decision-title" id="decision-title">Refund exceeds the autonomous-agent threshold.</p><p id="decision-description">The agent is trusted for payment operations, but policy FIN-204 requires an accountable human for refunds above €1,000.</p></div>
+        <dl class="signal-list">
+          <div><dt>Workload identity</dt><dd><span class="signal-ok">Verified</span><span id="identity-signal">support-agent</span></dd></div>
+          <div><dt>Delegated user</dt><dd><span class="signal-ok">Active</span><span id="user-signal">m.rossi@acme.eu</span></dd></div>
+          <div><dt>Capability</dt><dd><span class="signal-ok">Scoped</span><span id="capability-signal">payments:refund</span></dd></div>
+          <div><dt>Policy</dt><dd><span class="signal-warn" id="policy-state">Gate</span><span id="policy-signal">FIN-204</span></dd></div>
+        </dl>
+        <div class="approval-box" id="approval-box">
+          <div><p class="section-label">3 · Human approval</p><h3>Decision assigned to Finance Operations</h3><p>Approver: Elena Bianchi · role <code>refund-manager</code></p></div>
+          <div class="approval-actions"><button type="button" class="secondary-button danger-button" id="reject-button">Reject</button><button type="button" class="primary-button" id="approve-button">Approve once</button></div>
+        </div>
+        <div class="execution-box is-hidden" id="execution-box"><p class="section-label">3 · Tool execution</p><h3 id="execution-title">Simulated tool call completed</h3><pre id="execution-result"></pre></div>
+      </section>
+    </section>
+    <section class="evidence-panel panel">
+      <div class="panel-heading evidence-heading">
+        <div><p class="section-label">4 · Evidence</p><h2>Immutable-style audit trail</h2><p class="section-help">The prototype records the request, signals, policy outcome, approval and execution.</p></div>
+        <div class="evidence-actions"><button type="button" class="secondary-button" id="show-evidence-button">View evidence JSON</button><button type="button" class="secondary-button" id="reset-button">Reset</button></div>
+      </div>
+      <div class="audit-table-wrap"><table><thead><tr><th>Time</th><th>Stage</th><th>Actor</th><th>Event</th><th>Result</th></tr></thead><tbody id="audit-body"></tbody></table></div>
+      <div class="evidence-json is-hidden" id="evidence-json"><div><strong>Decision evidence</strong><button type="button" class="text-button" id="copy-button">Copy JSON</button></div><pre id="evidence-output"></pre></div>
+    </section>
+  </main>
+  <footer><p>IzyTrust interactive prototype · No real systems are called</p><div><a href="../">Product overview</a><a href="https://github.com/gcassata74/izytrust">View source</a></div></footer>
+  <script src="./demo.js"></script>
+</body>
+</html>
