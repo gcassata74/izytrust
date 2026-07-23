@@ -10,8 +10,10 @@
     />
     <meta name="author" content="Izylife Solutions s.r.l." />
     <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta name="theme-color" content="#0b1220" />
+    <meta name="theme-color" content="#141c31" />
     <link rel="canonical" href="https://gcassata74.github.io/izytrust/" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="IzyTrust by Izylife Solutions" />
     <meta property="og:title" content="IzyTrust | Security gateway for AI agents and MCP tools" />
@@ -26,17 +28,15 @@
       name="twitter:description"
       content="A trust and policy layer for AI agents, MCP servers and enterprise tools."
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
     <link rel="stylesheet" href="./styles.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -62,10 +62,9 @@
     </a>
 
     <header class="site-header">
-      <div class="container nav">
+      <div class="container nav-inner">
         <a class="brand" href="#top" aria-label="IzyTrust home">
           <img
-            class="brand-logo"
             src="./assets/izylife-logo.png"
             alt="Izylife Solutions"
             width="2501"
@@ -74,395 +73,451 @@
           <span class="brand-label">IzyTrust</span>
         </a>
 
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#why">
-            <span data-lang="en">Why</span>
-            <span data-lang="it">Perché</span>
-          </a>
-          <a href="#platform">
-            <span data-lang="en">Platform</span>
-            <span data-lang="it">Piattaforma</span>
-          </a>
-          <a href="#pilot">Pilot</a>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li>
+              <a href="#why">
+                <span data-lang="en">Benefits</span>
+                <span data-lang="it">Benefici</span>
+              </a>
+            </li>
+            <li>
+              <a href="#platform">
+                <span data-lang="en">Platform</span>
+                <span data-lang="it">Piattaforma</span>
+              </a>
+            </li>
+            <li><a href="#pilot">Pilot</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li>
+              <div class="language-switcher" aria-label="Language">
+                <button type="button" data-language-button="en" aria-pressed="true">EN</button>
+                <button type="button" data-language-button="it" aria-pressed="false">IT</button>
+              </div>
+            </li>
+          </ul>
         </nav>
-
-        <div class="nav-actions">
-          <div class="language-switcher" aria-label="Language">
-            <button type="button" data-language-button="en" aria-pressed="true">EN</button>
-            <button type="button" data-language-button="it" aria-pressed="false">IT</button>
-          </div>
-          <a class="button button-small" href="#pilot">
-            <span data-lang="en">Discuss a pilot</span>
-            <span data-lang="it">Valuta un pilot</span>
-          </a>
-        </div>
       </div>
     </header>
 
     <main id="main">
       <section class="hero" id="top">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">
-              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-              <span data-lang="en">Trust infrastructure for agentic AI</span>
-              <span data-lang="it">Infrastruttura di fiducia per l’AI agentica</span>
+        <div class="container">
+          <div class="hero-box">
+            <p class="badge">
+              <span data-lang="en">Trust infrastructure for regulated agentic AI</span>
+              <span data-lang="it">Infrastruttura di fiducia per l’AI agentica regolamentata</span>
             </p>
             <h1>
               <span data-lang="en">Govern every AI agent action before it reaches your tools.</span>
               <span data-lang="it">Governa ogni azione degli agenti AI prima che raggiunga i tuoi strumenti.</span>
             </h1>
-            <p class="hero-lead">
+            <p class="hero-copy">
               <span data-lang="en">
                 IzyTrust puts identity, policy, human approval and audit evidence between AI agents,
-                MCP servers and enterprise systems.
+                MCP servers and enterprise systems. Start with one controlled gateway and expand
+                without rewriting your agents.
               </span>
               <span data-lang="it">
                 IzyTrust inserisce identità, policy, approvazione umana ed evidenze di audit tra
-                agenti AI, server MCP e sistemi aziendali.
+                agenti AI, server MCP e sistemi aziendali. Parti da un gateway controllato ed estendi
+                la governance senza riscrivere gli agenti.
               </span>
             </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#pilot">
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#pilot">
                 <span data-lang="en">Design your first pilot</span>
                 <span data-lang="it">Progetta il primo pilot</span>
-                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </a>
-              <a class="button button-secondary" href="#platform">
+              <a class="btn btn-soft" href="#platform">
                 <span data-lang="en">See how it works</span>
                 <span data-lang="it">Scopri come funziona</span>
               </a>
             </div>
-            <ul class="hero-proof" aria-label="Key outcomes">
-              <li><i class="fa-solid fa-lock" aria-hidden="true"></i><span>Policy enforcement</span></li>
-              <li><i class="fa-solid fa-user-check" aria-hidden="true"></i><span>Human-in-the-loop</span></li>
-              <li><i class="fa-solid fa-file-shield" aria-hidden="true"></i><span>Audit evidence</span></li>
-            </ul>
-          </div>
-
-          <aside class="trust-flow" aria-label="IzyTrust control flow">
-            <p class="flow-label">
-              <span data-lang="en">One controlled path</span>
-              <span data-lang="it">Un unico percorso controllato</span>
-            </p>
-            <ol>
-              <li>
-                <span class="flow-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
-                <div>
-                  <small>01</small>
-                  <strong>
-                    <span data-lang="en">Agent identifies</span>
-                    <span data-lang="it">L’agente si identifica</span>
-                  </strong>
-                  <p>
-                    <span data-lang="en">Workload, user and delegated intent are bound to the request.</span>
-                    <span data-lang="it">Workload, utente e intento delegato vengono legati alla richiesta.</span>
-                  </p>
-                </div>
-              </li>
-              <li>
-                <span class="flow-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
-                <div>
-                  <small>02</small>
-                  <strong>
-                    <span data-lang="en">Policy decides</span>
-                    <span data-lang="it">La policy decide</span>
-                  </strong>
-                  <p>
-                    <span data-lang="en">Context-aware rules allow, deny or request human approval.</span>
-                    <span data-lang="it">Le regole contestuali consentono, negano o chiedono approvazione.</span>
-                  </p>
-                </div>
-              </li>
-              <li>
-                <span class="flow-icon"><i class="fa-solid fa-plug-circle-check" aria-hidden="true"></i></span>
-                <div>
-                  <small>03</small>
-                  <strong>
-                    <span data-lang="en">Tool executes</span>
-                    <span data-lang="it">Lo strumento esegue</span>
-                  </strong>
-                  <p>
-                    <span data-lang="en">The approved MCP call runs with the minimum required capability.</span>
-                    <span data-lang="it">La chiamata MCP approvata usa solo la capability necessaria.</span>
-                  </p>
-                </div>
-              </li>
-              <li>
-                <span class="flow-icon"><i class="fa-solid fa-fingerprint" aria-hidden="true"></i></span>
-                <div>
-                  <small>04</small>
-                  <strong>
-                    <span data-lang="en">Evidence remains</span>
-                    <span data-lang="it">L’evidenza rimane</span>
-                  </strong>
-                  <p>
-                    <span data-lang="en">Decision, approval and outcome become a traceable record.</span>
-                    <span data-lang="it">Decisione, approvazione ed esito diventano tracciabili.</span>
-                  </p>
-                </div>
-              </li>
-            </ol>
-          </aside>
-        </div>
-      </section>
-
-      <section class="problem section" id="why">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">
-              <span data-lang="en">The control gap</span>
-              <span data-lang="it">Il gap di controllo</span>
-            </p>
-            <h2>
-              <span data-lang="en">Agents act at machine speed. Governance still happens after the fact.</span>
-              <span data-lang="it">Gli agenti agiscono alla velocità delle macchine. La governance arriva dopo.</span>
-            </h2>
-            <p>
-              <span data-lang="en">
-                MCP makes tools easy to connect. It does not, by itself, answer who delegated an action,
-                whether the capability is still trusted or when a person must approve it.
-              </span>
-              <span data-lang="it">
-                MCP semplifica la connessione degli strumenti. Da solo non chiarisce chi ha delegato
-                un’azione, se la capability è ancora affidabile o quando serve una persona.
-              </span>
-            </p>
-          </div>
-
-          <div class="risk-grid">
-            <article>
-              <span class="card-icon"><i class="fa-solid fa-key" aria-hidden="true"></i></span>
-              <h3>
-                <span data-lang="en">Excessive capability</span>
-                <span data-lang="it">Capability eccessive</span>
-              </h3>
-              <p>
-                <span data-lang="en">Agents inherit broad credentials instead of task-scoped permissions.</span>
-                <span data-lang="it">Gli agenti ereditano credenziali ampie invece di permessi limitati al task.</span>
-              </p>
-            </article>
-            <article>
-              <span class="card-icon"><i class="fa-solid fa-code-compare" aria-hidden="true"></i></span>
-              <h3>
-                <span data-lang="en">Silent tool drift</span>
-                <span data-lang="it">Drift silenzioso degli strumenti</span>
-              </h3>
-              <p>
-                <span data-lang="en">Descriptions and schemas change while trust assumptions remain static.</span>
-                <span data-lang="it">Descrizioni e schemi cambiano mentre le assunzioni di fiducia restano ferme.</span>
-              </p>
-            </article>
-            <article>
-              <span class="card-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></span>
-              <h3>
-                <span data-lang="en">Unclear accountability</span>
-                <span data-lang="it">Responsabilità poco chiara</span>
-              </h3>
-              <p>
-                <span data-lang="en">Logs show a call, but not the full chain of intent, decision and approval.</span>
-                <span data-lang="it">I log mostrano la chiamata, non la catena completa di intento e approvazione.</span>
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="platform section" id="platform">
-        <div class="container">
-          <div class="section-heading section-heading-split">
-            <div>
-              <p class="eyebrow">
-                <span data-lang="en">The IzyTrust control plane</span>
-                <span data-lang="it">Il control plane IzyTrust</span>
-              </p>
-              <h2>
-                <span data-lang="en">One policy boundary for agents, people and tools.</span>
-                <span data-lang="it">Un unico confine di policy per agenti, persone e strumenti.</span>
-              </h2>
+            <div class="hero-note" aria-label="Key outcomes">
+              <span>Policy enforcement</span>
+              <span>Human-in-the-loop</span>
+              <span>Audit evidence</span>
             </div>
-            <p>
-              <span data-lang="en">
-                Start as a gateway in front of selected MCP servers. Extend control without rewriting
-                agents or replacing the systems they already use.
-              </span>
-              <span data-lang="it">
-                Parti con un gateway davanti ai server MCP selezionati. Estendi il controllo senza
-                riscrivere gli agenti o sostituire i sistemi già in uso.
-              </span>
-            </p>
-          </div>
 
-          <div class="capability-grid">
-            <article>
-              <span>01</span>
-              <i class="fa-solid fa-id-badge" aria-hidden="true"></i>
+            <div class="kpi">
+              <div class="kpi-card">
+                <div class="kpi-value">1</div>
+                <div class="kpi-label">
+                  <span data-lang="en">Controlled gateway for agent actions</span>
+                  <span data-lang="it">Gateway controllato per le azioni degli agenti</span>
+                </div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-value">3</div>
+                <div class="kpi-label">
+                  <span data-lang="en">Policy outcomes: allow, deny, approve</span>
+                  <span data-lang="it">Esiti di policy: consenti, nega, approva</span>
+                </div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-value">4</div>
+                <div class="kpi-label">
+                  <span data-lang="en">Evidence stages from intent to outcome</span>
+                  <span data-lang="it">Fasi di evidenza dall’intento all’esito</span>
+                </div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-value">100%</div>
+                <div class="kpi-label">
+                  <span data-lang="en">Traceable decisions for governed calls</span>
+                  <span data-lang="it">Decisioni tracciabili per le chiamate governate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-dark" id="why">
+        <div class="container">
+          <p class="eyebrow">
+            <span data-lang="en">Why governance must move before execution</span>
+            <span data-lang="it">Perché la governance deve precedere l’esecuzione</span>
+          </p>
+          <h2>
+            <span data-lang="en">Close the control gap around autonomous actions</span>
+            <span data-lang="it">Colma il gap di controllo sulle azioni autonome</span>
+          </h2>
+          <p class="lead">
+            <span data-lang="en">
+              MCP makes tools easy to connect. IzyTrust makes every request attributable,
+              policy-checked and ready for audit.
+            </span>
+            <span data-lang="it">
+              MCP rende semplice collegare gli strumenti. IzyTrust rende ogni richiesta
+              attribuibile, verificata dalle policy e pronta per l’audit.
+            </span>
+          </p>
+          <div class="value-grid">
+            <article class="value-card">
+              <div class="value-icon">01</div>
               <h3>
-                <span data-lang="en">Agent identity</span>
-                <span data-lang="it">Identità degli agenti</span>
+                <span data-lang="en">Task-scoped capability</span>
+                <span data-lang="it">Capability limitate al task</span>
               </h3>
               <p>
-                <span data-lang="en">Bind workload identity, requesting user, purpose and delegation chain.</span>
-                <span data-lang="it">Lega identità del workload, utente, scopo e catena di delega.</span>
+                <span data-lang="en">Replace broad inherited credentials with permissions bound to the requested action.</span>
+                <span data-lang="it">Sostituisci credenziali ampie con permessi legati all’azione richiesta.</span>
               </p>
             </article>
-            <article>
-              <span>02</span>
-              <i class="fa-solid fa-shield" aria-hidden="true"></i>
+            <article class="value-card">
+              <div class="value-icon">02</div>
               <h3>
-                <span data-lang="en">Policy enforcement</span>
-                <span data-lang="it">Enforcement delle policy</span>
+                <span data-lang="en">Continuous tool trust</span>
+                <span data-lang="it">Fiducia continua negli strumenti</span>
               </h3>
               <p>
-                <span data-lang="en">Evaluate tool, arguments, data sensitivity and runtime context.</span>
-                <span data-lang="it">Valuta strumento, argomenti, sensibilità dei dati e contesto runtime.</span>
+                <span data-lang="en">Detect changes in MCP descriptions, schemas and exposed capabilities.</span>
+                <span data-lang="it">Rileva modifiche a descrizioni MCP, schemi e capability esposte.</span>
               </p>
             </article>
-            <article>
-              <span>03</span>
-              <i class="fa-solid fa-hand" aria-hidden="true"></i>
+            <article class="value-card">
+              <div class="value-icon">03</div>
               <h3>
-                <span data-lang="en">Approval gates</span>
-                <span data-lang="it">Gate di approvazione</span>
+                <span data-lang="en">Clear accountability</span>
+                <span data-lang="it">Responsabilità chiara</span>
               </h3>
               <p>
-                <span data-lang="en">Pause high-impact actions and route them to an accountable approver.</span>
-                <span data-lang="it">Sospende le azioni ad alto impatto e le invia a un responsabile.</span>
-              </p>
-            </article>
-            <article>
-              <span>04</span>
-              <i class="fa-solid fa-wave-square" aria-hidden="true"></i>
-              <h3>
-                <span data-lang="en">Tool drift detection</span>
-                <span data-lang="it">Rilevamento del drift</span>
-              </h3>
-              <p>
-                <span data-lang="en">Flag changes in MCP metadata, schemas and exposed capabilities.</span>
-                <span data-lang="it">Segnala modifiche a metadati MCP, schemi e capability esposte.</span>
-              </p>
-            </article>
-            <article>
-              <span>05</span>
-              <i class="fa-solid fa-receipt" aria-hidden="true"></i>
-              <h3>
-                <span data-lang="en">Decision evidence</span>
-                <span data-lang="it">Evidenze decisionali</span>
-              </h3>
-              <p>
-                <span data-lang="en">Keep a structured record from request to policy decision and outcome.</span>
-                <span data-lang="it">Conserva un record strutturato dalla richiesta fino all’esito.</span>
-              </p>
-            </article>
-            <article>
-              <span>06</span>
-              <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
-              <h3>
-                <span data-lang="en">Flexible deployment</span>
-                <span data-lang="it">Deployment flessibile</span>
-              </h3>
-              <p>
-                <span data-lang="en">Designed for cloud, Kubernetes and controlled on-premises environments.</span>
-                <span data-lang="it">Pensato per cloud, Kubernetes e ambienti on-premise controllati.</span>
+                <span data-lang="en">Keep the full chain of intent, policy decision, approval and execution outcome.</span>
+                <span data-lang="it">Conserva l’intera catena di intento, decisione, approvazione ed esito.</span>
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="outcomes section">
-        <div class="container outcomes-grid">
-          <div>
-            <p class="eyebrow">
-              <span data-lang="en">Built for real operating teams</span>
-              <span data-lang="it">Pensato per team operativi reali</span>
-            </p>
-            <h2>
-              <span data-lang="en">Security can say “yes” with conditions—not only “no”.</span>
-              <span data-lang="it">La sicurezza può dire “sì, a queste condizioni”, non soltanto “no”.</span>
-            </h2>
+      <section id="platform">
+        <div class="container">
+          <p class="eyebrow">
+            <span data-lang="en">What the control plane includes</span>
+            <span data-lang="it">Cosa include il control plane</span>
+          </p>
+          <h2>
+            <span data-lang="en">One policy boundary for agents, people and tools</span>
+            <span data-lang="it">Un unico confine di policy per agenti, persone e strumenti</span>
+          </h2>
+          <p class="lead">
+            <span data-lang="en">
+              Deploy IzyTrust in front of selected MCP servers and enterprise systems.
+              Extend control without replacing the agents or tools already in use.
+            </span>
+            <span data-lang="it">
+              Posiziona IzyTrust davanti ai server MCP e ai sistemi aziendali selezionati.
+              Estendi il controllo senza sostituire gli agenti o gli strumenti già in uso.
+            </span>
+          </p>
+
+          <div class="panel">
+            <div class="panel-row">
+              <div class="panel-copy">
+                <h3 class="panel-title">
+                  <span data-lang="en">Key capabilities</span>
+                  <span data-lang="it">Capability principali</span>
+                </h3>
+                <ul class="check-list">
+                  <li>
+                    <span data-lang="en">Bind workload identity, requesting user, purpose and delegation chain.</span>
+                    <span data-lang="it">Lega identità del workload, utente, scopo e catena di delega.</span>
+                  </li>
+                  <li>
+                    <span data-lang="en">Evaluate tool, arguments, data sensitivity and runtime context.</span>
+                    <span data-lang="it">Valuta strumento, argomenti, sensibilità dei dati e contesto runtime.</span>
+                  </li>
+                  <li>
+                    <span data-lang="en">Pause high-impact actions and route them to accountable approvers.</span>
+                    <span data-lang="it">Sospende le azioni ad alto impatto e le invia a responsabili identificati.</span>
+                  </li>
+                  <li>
+                    <span data-lang="en">Flag drift in MCP metadata, schemas and exposed capabilities.</span>
+                    <span data-lang="it">Segnala drift in metadati MCP, schemi e capability esposte.</span>
+                  </li>
+                  <li>
+                    <span data-lang="en">Preserve a structured record from request to decision and outcome.</span>
+                    <span data-lang="it">Conserva un record strutturato dalla richiesta alla decisione e all’esito.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="stack-grid" aria-label="Supported concepts and environments">
+                <div class="chip">MCP Gateway</div>
+                <div class="chip">Agent Identity</div>
+                <div class="chip">Policy Engine</div>
+                <div class="chip">Human Approval</div>
+                <div class="chip">Least Privilege</div>
+                <div class="chip">Tool Drift</div>
+                <div class="chip">Audit Evidence</div>
+                <div class="chip">Cloud</div>
+                <div class="chip">Kubernetes</div>
+                <div class="chip">On-premises</div>
+              </div>
+            </div>
           </div>
-          <ul>
-            <li>
-              <i class="fa-solid fa-check" aria-hidden="true"></i>
-              <span data-lang="en">Give AI teams a repeatable path from prototype to controlled production.</span>
-              <span data-lang="it">Porta i team AI dal prototipo alla produzione controllata con un percorso ripetibile.</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-check" aria-hidden="true"></i>
-              <span data-lang="en">Make approval responsibilities visible before a high-impact action runs.</span>
-              <span data-lang="it">Rendi visibili le responsabilità prima delle azioni ad alto impatto.</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-check" aria-hidden="true"></i>
-              <span data-lang="en">Turn agent activity into evidence for security, risk and compliance reviews.</span>
-              <span data-lang="it">Trasforma l’attività degli agenti in evidenze per security, risk e compliance.</span>
-            </li>
-          </ul>
+
+          <div class="diagram-grid">
+            <article class="diagram-card">
+              <h3>
+                <span data-lang="en">Control architecture</span>
+                <span data-lang="it">Architettura di controllo</span>
+              </h3>
+              <div class="mermaid">
+                flowchart LR
+                  Agent["AI Agent"] --> Trust["IzyTrust"]
+                  User["User Intent"] --> Trust
+                  Trust --> Policy["Policy Engine"]
+                  Policy --> Approval["Human Approval"]
+                  Policy --> Tool["MCP Tool"]
+                  Approval --> Tool
+                  Trust --> Evidence["Audit Evidence"]
+              </div>
+            </article>
+            <article class="diagram-card">
+              <h3>
+                <span data-lang="en">Governed tool call</span>
+                <span data-lang="it">Chiamata governata allo strumento</span>
+              </h3>
+              <div class="mermaid">
+                sequenceDiagram
+                  participant A as AI Agent
+                  participant I as IzyTrust
+                  participant P as Policy
+                  participant T as MCP Tool
+                  A->>I: Tool request + intent
+                  I->>P: Evaluate identity and context
+                  P-->>I: Allow, deny or approve
+                  I->>T: Minimum required capability
+                  T-->>I: Execution outcome
+                  I-->>A: Result + evidence
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="pilot section" id="pilot">
-        <div class="container pilot-card">
-          <div>
-            <p class="eyebrow">
-              <span data-lang="en">Pilot program</span>
-              <span data-lang="it">Programma pilot</span>
-            </p>
-            <h2>
-              <span data-lang="en">Start with one agent, one sensitive tool and one measurable risk.</span>
-              <span data-lang="it">Parti da un agente, uno strumento sensibile e un rischio misurabile.</span>
-            </h2>
-            <p>
-              <span data-lang="en">
-                We map the trust boundary, define the policy and approval model, and deliver a pilot
-                blueprint aligned with your architecture and compliance needs.
-              </span>
-              <span data-lang="it">
-                Mappiamo il confine di fiducia, definiamo policy e approvazioni e realizziamo un
-                blueprint coerente con architettura ed esigenze di compliance.
-              </span>
-            </p>
+      <section class="section-dark" id="pilot">
+        <div class="container">
+          <p class="eyebrow">
+            <span data-lang="en">How to start</span>
+            <span data-lang="it">Come iniziare</span>
+          </p>
+          <h2>
+            <span data-lang="en">A focused pilot in 3 steps</span>
+            <span data-lang="it">Un pilot focalizzato in 3 passi</span>
+          </h2>
+          <p class="lead">
+            <span data-lang="en">Choose one agent workflow, put a policy boundary around it and measure the outcome.</span>
+            <span data-lang="it">Scegli un workflow agentico, applica un confine di policy e misura il risultato.</span>
+          </p>
+          <div class="steps">
+            <article class="step">
+              <span class="step-index">1</span>
+              <h3>
+                <span data-lang="en">Select the workflow</span>
+                <span data-lang="it">Seleziona il workflow</span>
+              </h3>
+              <p>
+                <span data-lang="en">Choose a bounded agent use case with clear tools, users and business impact.</span>
+                <span data-lang="it">Scegli un caso d’uso circoscritto con strumenti, utenti e impatto chiari.</span>
+              </p>
+            </article>
+            <article class="step">
+              <span class="step-index">2</span>
+              <h3>
+                <span data-lang="en">Define trust rules</span>
+                <span data-lang="it">Definisci le regole di fiducia</span>
+              </h3>
+              <p>
+                <span data-lang="en">Map identity, permissions, approval thresholds and the evidence to retain.</span>
+                <span data-lang="it">Mappa identità, permessi, soglie di approvazione ed evidenze da conservare.</span>
+              </p>
+            </article>
+            <article class="step">
+              <span class="step-index">3</span>
+              <h3>
+                <span data-lang="en">Run and measure</span>
+                <span data-lang="it">Esegui e misura</span>
+              </h3>
+              <p>
+                <span data-lang="en">Validate policy quality, approval load, traceability and operational fit.</span>
+                <span data-lang="it">Valida qualità delle policy, carico approvativo, tracciabilità e fit operativo.</span>
+              </p>
+            </article>
           </div>
-          <div class="pilot-action">
-            <a
-              class="button button-primary"
-              data-contact-link
-              href="https://izylifesolutions.com/#contacts"
-            >
-              <span data-lang="en">Talk to Izylife Solutions</span>
-              <span data-lang="it">Parla con Izylife Solutions</span>
-              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-            </a>
-            <small>
-              <span data-lang="en">Architecture, security and operating model in one conversation.</span>
-              <span data-lang="it">Architettura, sicurezza e modello operativo in un unico confronto.</span>
-            </small>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="container">
+          <p class="eyebrow">
+            <span data-lang="en">Frequently asked questions</span>
+            <span data-lang="it">Domande frequenti</span>
+          </p>
+          <h2>
+            <span data-lang="en">Security and governance for AI agents and MCP</span>
+            <span data-lang="it">Sicurezza e governance per agenti AI e MCP</span>
+          </h2>
+          <p class="lead">
+            <span data-lang="en">The essentials for teams moving agentic workflows from prototype to production.</span>
+            <span data-lang="it">Gli elementi essenziali per portare workflow agentici dal prototipo alla produzione.</span>
+          </p>
+          <div class="faq-grid">
+            <article class="faq-item">
+              <h3>
+                <span data-lang="en">What does IzyTrust control?</span>
+                <span data-lang="it">Cosa controlla IzyTrust?</span>
+              </h3>
+              <p>
+                <span data-lang="en">It evaluates who is acting, which tool is requested, the arguments, runtime context and whether human approval is required.</span>
+                <span data-lang="it">Valuta chi agisce, lo strumento richiesto, gli argomenti, il contesto runtime e se serve approvazione umana.</span>
+              </p>
+            </article>
+            <article class="faq-item">
+              <h3>
+                <span data-lang="en">Does it replace MCP servers or agents?</span>
+                <span data-lang="it">Sostituisce server MCP o agenti?</span>
+              </h3>
+              <p>
+                <span data-lang="en">No. It adds a policy and evidence boundary in front of selected tools without forcing a rewrite of the connected systems.</span>
+                <span data-lang="it">No. Aggiunge un confine di policy ed evidenza davanti agli strumenti senza riscrivere i sistemi collegati.</span>
+              </p>
+            </article>
+            <article class="faq-item">
+              <h3>
+                <span data-lang="en">Where can it run?</span>
+                <span data-lang="it">Dove può essere eseguito?</span>
+              </h3>
+              <p>
+                <span data-lang="en">IzyTrust is designed for cloud, Kubernetes and controlled on-premises environments.</span>
+                <span data-lang="it">IzyTrust è progettato per cloud, Kubernetes e ambienti on-premise controllati.</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-dark" id="contact">
+        <div class="container">
+          <div class="cta">
+            <div>
+              <h2>
+                <span data-lang="en">Ready to put one agent workflow under control?</span>
+                <span data-lang="it">Vuoi mettere sotto controllo un workflow agentico?</span>
+              </h2>
+              <p>
+                <span data-lang="en">Bring one concrete use case. We will map the trust boundary, pilot scope and measurable outcome with you.</span>
+                <span data-lang="it">Porta un caso d’uso concreto. Mapperemo insieme confine di fiducia, perimetro del pilot e risultato misurabile.</span>
+              </p>
+            </div>
+            <div class="cta-actions">
+              <a
+                class="btn btn-primary"
+                data-contact-link
+                href="https://izylifesolutions.com/#contacts"
+              >
+                <span data-lang="en">Talk to Izylife Solutions</span>
+                <span data-lang="it">Parla con Izylife Solutions</span>
+              </a>
+              <a class="btn btn-soft" href="https://github.com/gcassata74/izytrust">GitHub</a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="container footer-inner">
-        <div>
-          <strong>IzyTrust</strong>
-          <p>
-            <span data-lang="en">Agent trust infrastructure by Izylife Solutions.</span>
-            <span data-lang="it">Infrastruttura di fiducia per agenti AI, di Izylife Solutions.</span>
-          </p>
+      <div class="container">
+        <div class="footer-brand">
+          <img
+            src="./assets/izylife-logo.png"
+            alt="Izylife Solutions"
+            width="2501"
+            height="834"
+            loading="lazy"
+          />
         </div>
-        <div class="footer-links">
-          <a href="https://izylifesolutions.com">
-            <span data-lang="en">Company website</span>
-            <span data-lang="it">Sito aziendale</span>
-          </a>
-          <a href="https://github.com/gcassata74/izytrust">GitHub</a>
+        <div class="footer-row">
+          <span>
+            <span data-lang="en">IzyTrust · Trust infrastructure for agentic AI</span>
+            <span data-lang="it">IzyTrust · Infrastruttura di fiducia per l’AI agentica</span>
+          </span>
+          <span>© <span id="year">2026</span> Izylife Solutions s.r.l.</span>
         </div>
-        <p>© <span id="year">2026</span> Izylife Solutions s.r.l.</p>
       </div>
     </footer>
 
     <script src="./script.js"></script>
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: "strict",
+        theme: "base",
+        fontFamily: "Work Sans, Segoe UI, sans-serif",
+        themeVariables: {
+          primaryColor: "#0f1a31",
+          primaryTextColor: "#eaf2ff",
+          primaryBorderColor: "#66adff",
+          lineColor: "#8ac6ff",
+          secondaryColor: "#152443",
+          tertiaryColor: "#12213b",
+          background: "#0f1a31"
+        },
+        flowchart: {
+          curve: "basis"
+        },
+        sequence: {
+          actorMargin: 60,
+          mirrorActors: false
+        }
+      });
+
+      await mermaid.run({ querySelector: ".mermaid" });
+      document.documentElement.dataset.diagramsReady = "true";
+    </script>
   </body>
 </html>
